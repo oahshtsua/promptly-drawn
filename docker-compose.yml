@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17
+    container_name: promptlydrawn-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    env_file: ".env.services"
+
+  redis:
+    image: redis:7
+    container_name: promptlydrawn-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  db-data:
+
