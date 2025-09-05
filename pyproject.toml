@@ -1,0 +1,24 @@
+[project]
+name = "promptly-drawn"
+version = "0.1.0"
+description = "Generate images from text prompts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.16.5",
+    "asyncpg>=0.30.0",
+    "celery[redis]>=5.5.3",
+    "fastapi>=0.116.1",
+    "loguru>=0.7.3",
+    "psycopg[binary]>=3.2.9",
+    "pydantic-settings>=2.10.1",
+    "sqlalchemy[asyncio]>=2.0.43",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.4.0",
+    "pre-commit>=4.3.0",
+]
+
