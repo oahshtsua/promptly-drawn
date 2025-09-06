@@ -13,6 +13,11 @@ class Settings(BaseSettings):
 
     JWT_SECRET_KEY: str
 
+    STORAGE_ENDPOINT: str
+    STORAGE_BUCKET: str
+    STORAGE_ACCESS_KEY: str
+    STORAGE_SECRET_KEY: str
+
     model_config = SettingsConfigDict(env_file=".env.backend")
 
 
