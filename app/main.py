@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.config import settings
-from app.endpoints import healthcheck
+from app.endpoints import auth, healthcheck
 
 
 @asynccontextmanager
@@ -18,3 +18,4 @@ app = FastAPI(
 )
 
 app.include_router(healthcheck.router)
+app.include_router(auth.router, prefix="/auth", tags=["Auth"])
